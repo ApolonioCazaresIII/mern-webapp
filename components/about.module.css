@@ -1,0 +1,22 @@
+.aboutme {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.borderCircle {
+  border-radius: 9999px;
+}
+
+.headerImage {
+  width: 6rem;
+  height: 6rem;
+}
+
+.headerHomeImage {
+  width: 12rem;
+  height: 12rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
