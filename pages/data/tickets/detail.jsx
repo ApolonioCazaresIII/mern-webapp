@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AppNavbar from '../../AppNavbar';
+import AppNavbar from '../../../components/AppNavbar';
 import {
   Button,
   Col,
