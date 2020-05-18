@@ -14,7 +14,7 @@ class Tickets extends Component {
     const { tickets } = this.state;
     return (
       <div>
-        <AppNavbar />
+        {/* <AppNavbar /> */}
         <Container>
           <h1>Ticket list</h1>
           <ListGroup>
