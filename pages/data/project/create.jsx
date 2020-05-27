@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import AppNavbar from '../../../components/AppNavbar';
-import toaststyles from '../../../components/snackbar.module.css';
 import {
   Alert,
   Col,
@@ -166,22 +165,29 @@ class ProjectCreate extends Component {
                   />
                 </Col>
               </FormGroup>
-              <FormGroup row>
-                <Label sm={2} style={{ marginTop: '.5rem' }}>
-                  Invited:
-                </Label>
-                <Col sm={6}>
-                  <ListGroup>
-                    <ListGroupItem>caz3000</ListGroupItem>
-                    <ListGroupItem>tek313</ListGroupItem>
-                  </ListGroup>
-                </Col>
-                <Col sm={4}>
-                  <Button color='dark' block onClick={this.toggle}>
-                    Invite
-                  </Button>
-                </Col>
-              </FormGroup>
+              {
+                // TODO: Plan invitations out more
+                /* 
+                
+                <FormGroup row>
+                  <Label sm={2} style={{ marginTop: '.5rem' }}>
+                    Invited:
+                  </Label>
+                  <Col sm={6}>
+                    <ListGroup>
+                      <ListGroupItem>caz3000</ListGroupItem>
+                      <ListGroupItem>tek313</ListGroupItem>
+                    </ListGroup>
+                  </Col>
+                  <Col sm={4}>
+                    <Button color='dark' block onClick={this.toggle}>
+                      Invite
+                    </Button>
+                  </Col>
+                </FormGroup>
+              */
+              }
+
               <FormGroup row>
                 <Button
                   color='dark'

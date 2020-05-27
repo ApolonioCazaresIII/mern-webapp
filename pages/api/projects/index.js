@@ -10,7 +10,7 @@ handler.use(middleware);
 // @route POST api/projects
 // @desc Create a new proejct
 // @access Public
-// TODO: Handle the users who have access to project
+// TODO: Handle input of the users who have access to project
 handler.post(async (req, res) => {
   // Grab data from payload
   var data;
@@ -43,6 +43,16 @@ handler.post(async (req, res) => {
     // return bad status
     res.json({ status: 'bad' });
   }
+});
+
+// @route GET api/projects
+// @desc Return list of all projects
+// @access Public
+// TODO: Implement searching/filtering projects
+handler.get(async (req, res) => {
+  // Grab data from DB
+  let docs = await req.db.collection('projects').find().toArray();
+  res.json(docs);
 });
 
 export default handler;

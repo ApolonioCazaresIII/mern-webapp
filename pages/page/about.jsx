@@ -30,7 +30,7 @@ class About extends Component {
                   href='https://www.linkedin.com/in/apolonio-cazares-36bb24184/'
                   block
                 >
-                  LinkeIn
+                  LinkedIn
                 </Button>
               </Col>
               <Col>

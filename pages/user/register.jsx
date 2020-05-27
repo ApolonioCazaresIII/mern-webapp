@@ -10,7 +10,6 @@ import {
   Button,
   Alert,
 } from 'reactstrap';
-import toaststyles from '../../components/snackbar.module.css';
 
 const axios = require('axios');
 
@@ -41,6 +40,7 @@ class Register extends Component {
   };
 
   async handleOnClick() {
+    // TODO: Make sure email input is valid
     // check if input values are correct
     if (this.state.username == null) {
       this.setError('You must enter a username! Try again.');

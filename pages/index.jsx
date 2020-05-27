@@ -8,7 +8,7 @@ class Index extends React.Component {
     return (
       <div>
         <Head>
-          <title>Welcome to Track My Bug</title>
+          <title>Welcome to TrackMyBug</title>
         </Head>
         <Homepage />
       </div>
