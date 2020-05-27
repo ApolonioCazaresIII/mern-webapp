@@ -52,6 +52,6 @@ class About extends Component {
 
 const name = 'Apolonio Cazares';
 const about_text =
-  'I am a Software Engineer from the Metro Detroit area and I have a passion for creating things.';
+  'I am a Software Engineer from the Metro Detroit area and I have a passion for creating things. With this project I aim to showcase my talent as a Full Stack Web Developer. \nIf there are any questions please feel free to reach out at my email aprcazares@gmail.com, thanks for visiting TrackMyBug!';
 
 export default About;

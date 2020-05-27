@@ -1,0 +1,11 @@
+#toastBody {
+  width: 100%;
+  float: left;
+}
+
+#toastParent {
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+}

@@ -9,13 +9,13 @@ class Homepage extends Component {
       <div>
         <AppNavbar />
         <Container>
-          <Jumbotron>
-            <h1 className='display-3'>Welcome to TrackMyBug</h1>
+          <Jumbotron style={{ textAlign: 'center' }}>
+            <h1 className='display-3'>Welcome to Track My Bug</h1>
             <p className='lead'>This is the Homepage for TrackMyBug</p>
             <hr className='my-2' />
             <p>To start tracking your bugs sign up!</p>
             <p className='lead'>
-              <Button color='primary' href='/signup'>
+              <Button color='primary' href='/user/register'>
                 Sign up
               </Button>
             </p>

@@ -10,7 +10,10 @@
   "dependencies": {
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.16",
     "next": "9.4.1",
+    "next-connect": "^0.6.6",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-redux": "^7.2.0",

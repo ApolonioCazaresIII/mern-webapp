@@ -21,8 +21,9 @@ class Login extends Component {
     return (
       <div>
         <AppNavbar />
-        <Container>
+        <Container className='themed-container' fluid='sm'>
           <Jumbotron>
+            <h1 className='display-4'>Login</h1>
             <Form onSubmit={this.onSubmit}>
               <FormGroup>
                 <Label for='username' style={{ marginTop: '.5rem' }}>

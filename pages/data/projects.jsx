@@ -20,7 +20,9 @@ class Projects extends Component {
           <ListGroup>
             {projects.map(({ id, username }) => (
               <ListGroupItem>
-                <Label style={{ float: 'left' }}>Project ID:{id}</Label>
+                <Label style={{ float: 'left' }} key={id}>
+                  Project ID:{id}
+                </Label>
                 <Button
                   style={{ margin: 'auto' }}
                   href='/data/project/detail'

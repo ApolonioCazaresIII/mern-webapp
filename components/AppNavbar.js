@@ -11,7 +11,9 @@ import {
 } from 'reactstrap';
 
 class AppNavbar extends Component {
-  state = {};
+  state = {
+    isOpen: false,
+  };
 
   toggle = () =>
     this.setState({
@@ -24,7 +26,7 @@ class AppNavbar extends Component {
         <Navbar color='dark' dark expand='sm' className='mb-5'>
           <Container>
             <NavbarBrand href='/'>TrackMyBug</NavbarBrand>
-            <NavbarToggler onClick={this.isOpen} navbar />
+            <NavbarToggler onClick={this.toggle} navbar='true' />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className='ml-auto' navbar>
                 <NavItem>

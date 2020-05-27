@@ -1,6 +1,7 @@
 import App from 'next/app';
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../components/styles.css';
 
 class MyApp extends App {
   render() {
