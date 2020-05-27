@@ -1,9 +1,6 @@
 import nextConnect from 'next-connect';
 import middleware from '../../../middleware/database';
 
-// Project Model
-// const Project = require('../../../models/project');
-
 const handler = nextConnect();
 handler.use(middleware);
 

@@ -4,6 +4,7 @@ import {
   Button,
   Col,
   Container,
+  Input,
   Label,
   ListGroupItem,
   ListGroup,
@@ -34,32 +35,50 @@ class Projects extends Component {
     this.setState({ loading: !this.state.loading });
   };
 
+  // TODO: implement search
+
   render() {
     const { projects } = this.state;
     return (
       <div>
         <AppNavbar />
         <Container>
-          <h1>Project list</h1>
-          <ListGroup>
+          <Row>
+            <Col>
+              <h1>Project list</h1>
+            </Col>
+            <Col>
+              <Input
+                type='text'
+                id='searchparam'
+                name='searchparam'
+                placeholder='search by any field...'
+              ></Input>
+            </Col>
+            <Col>
+              <Button dark>Search</Button>
+            </Col>
+          </Row>
+          <ListGroup style={{ marginTop: '0.5rem' }}>
             {projects.map(({ _id, name, creator }) => (
               <ListGroupItem>
                 <Row>
                   <Col>
-                    <Label key={_id}>Project Name: {name}</Label>
-                  </Col>
-                  <Col>
-                    <Button href='/data/project/detail' dark>
-                      View tickets
-                    </Button>
+                    <Label key={_id}>Name: {name}</Label>
                   </Col>
                   <Col>
                     <Label>Creator: {creator}</Label>
+                  </Col>
+                  <Col>
+                    <Button href={`/data/project/detail?pid=${_id}`} dark>
+                      View details
+                    </Button>
                   </Col>
                 </Row>
               </ListGroupItem>
             ))}
           </ListGroup>
+
           {
             // Loding Spinner
             this.state.loading ? (

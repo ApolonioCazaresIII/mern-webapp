@@ -19,10 +19,10 @@ class About extends Component {
           className={`${styles.headerHomeImage} ${styles.borderCircle}`}
           alt={name}
         />
-        <Jumbotron>
-          <h1 className='display-3'>Hello, I'm Apolonio!</h1>
-          <p className='lead'>{about_text}</p>
-          <Container>
+        <Container>
+          <Jumbotron>
+            <h1>Hello, I'm Apolonio!</h1>
+            <p className='lead'>{about_text}</p>
             <Row>
               <Col>
                 <Button
@@ -43,8 +43,12 @@ class About extends Component {
                 </Button>
               </Col>
             </Row>
-          </Container>
-        </Jumbotron>
+          </Jumbotron>
+          <Jumbotron>
+            <h1>How was TrackMyBug made?</h1>
+            <p className='lead'>{projectdesc}</p>
+          </Jumbotron>
+        </Container>
       </div>
     );
   }
@@ -53,5 +57,6 @@ class About extends Component {
 const name = 'Apolonio Cazares';
 const about_text =
   'I am a Software Engineer from the Metro Detroit area and I have a passion for creating things. With this project I aim to showcase my talent as a Full Stack Web Developer. \nIf there are any questions please feel free to reach out at my email aprcazares@gmail.com, thanks for visiting TrackMyBug!';
+const projectdesc = 'Blah blah blah';
 
 export default About;
