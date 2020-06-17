@@ -92,16 +92,16 @@ class ProjectCreate extends Component {
       if (res.data.status == 'ok') {
         // Notify user that creation was successful
         this.setState({ alertColor: 'info' });
-        this.setError('Registration successful, redirecting...');
+        this.setError('Creation successful, redirecting...');
         this.setShow(true);
         setTimeout(function () {
           window.location.href = '/dashboard';
         }, 2000);
       } else {
-        // Notify user that creation was successful
+        // Notify user that creation was unsuccessful
         this.setState({ alertColor: 'danger' });
         this.setError(
-          'Registration failed, the creator has another project with the same name!'
+          'Creation failed, there is another project with the same name!'
         );
         this.setShow(true);
       }
@@ -125,7 +125,7 @@ class ProjectCreate extends Component {
         <Container>
           <Jumbotron>
             <h1 className='display-4'>Create a project</h1>
-            <Form onSubmit={this.onSubmit}>
+            <Form>
               <FormGroup row>
                 <Label for='name' style={{ marginTop: '.5rem' }} sm={2}>
                   Project name

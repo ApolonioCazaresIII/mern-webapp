@@ -24,9 +24,7 @@ handler.post(async (req, res) => {
   };
 
   // Ensure this project is unique
-  var cursor = await req.db
-    .collection('projects')
-    .findOne({ name: data.name, creator: data.creator });
+  var cursor = await req.db.collection('projects').findOne({ name: data.name });
 
   if (cursor === null) {
     // Insert into DB

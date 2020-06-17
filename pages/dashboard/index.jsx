@@ -22,11 +22,18 @@ class Dashboard extends Component {
               Checkout Tickets
             </Button>
           </Jumbotron>
-          <Label>Should only be seen as a project lead</Label>
           <Jumbotron>
+            <Label>Should only be seen as a project lead</Label>
             <Label>Some generic statistics about the projects</Label>
             <Button block href='/data/project/create'>
               Create a new project
+            </Button>
+          </Jumbotron>
+          <Jumbotron>
+            <Label>Should be seen by all users</Label>
+            <Label>Stats maybe number of tickets</Label>
+            <Button block href='/data/ticket/create'>
+              Create a new ticket
             </Button>
           </Jumbotron>
         </Container>

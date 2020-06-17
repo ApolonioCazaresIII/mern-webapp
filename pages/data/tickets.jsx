@@ -10,6 +10,8 @@ class Tickets extends Component {
       { id: 2, username: 'polocaz' },
     ],
   };
+
+  // TODO: Get project ID somehow
   render() {
     const { tickets } = this.state;
     return (

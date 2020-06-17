@@ -56,21 +56,24 @@ class Projects extends Component {
               ></Input>
             </Col>
             <Col>
-              <Button dark>Search</Button>
+              <Button>Search</Button>
+            </Col>
+            <Col>
+              <Button href='/data/project/create'>Create</Button>
             </Col>
           </Row>
           <ListGroup style={{ marginTop: '0.5rem' }}>
             {projects.map(({ _id, name, creator }) => (
-              <ListGroupItem>
+              <ListGroupItem key={_id}>
                 <Row>
                   <Col>
-                    <Label key={_id}>Name: {name}</Label>
+                    <Label>Name: {name}</Label>
                   </Col>
                   <Col>
                     <Label>Creator: {creator}</Label>
                   </Col>
                   <Col>
-                    <Button href={`/data/project/detail?pid=${_id}`} dark>
+                    <Button href={`/data/project/detail?pid=${_id}`}>
                       View details
                     </Button>
                   </Col>
