@@ -28,13 +28,13 @@ class TicketCreate extends Component {
       creator: '',
       responsible: '',
       modal: false,
-      projname: '',
-      projid: '',
+      projname: 'None',
+      projid: 'None',
       category: 'frontend',
       description: '',
       status: 'notstarted',
       errmsg: '',
-      projectlist: [{ label: 'Project name1', value: 'Project ID' }],
+      projectlist: [{ label: 'Loading', value: 'loadingID' }],
       modalSelect: '',
     };
 
@@ -49,8 +49,25 @@ class TicketCreate extends Component {
     this.setState({ show: val });
   };
 
-  toggle = () => {
+  toggle = async () => {
     this.setState({ modal: !this.state.modal });
+    if (this.state.modal === false) {
+      this.setState({ modal: true });
+      // grab all projects
+      var res = null;
+      try {
+        res = await axios.get('/api/projects');
+      } catch (e) {
+        console.log(e);
+      }
+
+      var data = res.data;
+      var temp = [];
+      data.map(({ _id, name }) => temp.push({ label: name, value: _id }));
+      this.setState({ projectlist: temp });
+    } else {
+      this.setState({ modal: !this.state.modal });
+    }
   };
 
   modalSelect = () => {
@@ -270,11 +287,8 @@ class TicketCreate extends Component {
               />
             </ModalBody>
             <ModalFooter>
-              <Button color='primary' onClick={this.modalSelect}>
-                Select
-              </Button>
               <Button color='dark' onClick={this.toggle}>
-                Cancel
+                Close
               </Button>
             </ModalFooter>
           </Modal>

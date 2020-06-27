@@ -11,7 +11,9 @@ import {
 } from 'reactstrap';
 
 class Login extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+  }
 
   onSubmit = () => {
     console.log('Clicked signin');
@@ -23,7 +25,7 @@ class Login extends Component {
         <AppNavbar />
         <Container className='themed-container' fluid='sm'>
           <Jumbotron>
-            <h1 className='display-4'>Login</h1>
+            <h1 className='display-4'>Sign In</h1>
             <Form onSubmit={this.onSubmit}>
               <FormGroup>
                 <Label for='username' style={{ marginTop: '.5rem' }}>
@@ -45,7 +47,15 @@ class Login extends Component {
                   onChange={this.onChange}
                 />
                 <Button color='dark' style={{ marginTop: '2rem' }} block>
-                  Login
+                  Sign in
+                </Button>
+                <Button
+                  href='/api/auth/google'
+                  color='danger'
+                  style={{ marginTop: '2rem' }}
+                  block
+                >
+                  Sign in with Google
                 </Button>
               </FormGroup>
             </Form>

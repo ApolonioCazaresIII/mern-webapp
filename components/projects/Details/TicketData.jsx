@@ -8,7 +8,9 @@ class TicketData extends Component {
       <div>
         <h1>Ticket data for project {this.pid}</h1>
         <ListGroup>
-          {this.props.tickets.map({ name, projectname, category, status })}
+          {
+            //this.props.tickets.map({ name, projectname, category, status })
+          }
         </ListGroup>
       </div>
     );

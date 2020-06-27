@@ -170,7 +170,7 @@ class Register extends Component {
                   block
                   onClick={this.handleOnClick}
                 >
-                  Register
+                  Sign up
                 </Button>
               </FormGroup>
             </Form>

@@ -87,7 +87,7 @@ class ProjectCreate extends Component {
       } catch (e) {
         console.log(`ERROR: ${e}`);
       }
-
+      console.log(res);
       // Show that it worked
       if (res.data.status == 'ok') {
         // Notify user that creation was successful

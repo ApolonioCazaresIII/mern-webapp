@@ -32,12 +32,19 @@ class AppNavbar extends Component {
                 <NavItem>
                   <NavLink href='/dashboard'>Dashboard</NavLink>
                 </NavItem>
-                <NavItem>
-                  <NavLink href='/user/login'>Login</NavLink>
-                </NavItem>
+
                 <NavItem>
                   <NavLink href='/page/about'>About</NavLink>
                 </NavItem>
+                {this.props.isAuth ? (
+                  <NavItem>
+                    <NavLink href='/api/auth/logout'>Logout</NavLink>
+                  </NavItem>
+                ) : (
+                  <NavItem>
+                    <NavLink href='/user/login'>Login</NavLink>
+                  </NavItem>
+                )}
               </Nav>
             </Collapse>
           </Container>

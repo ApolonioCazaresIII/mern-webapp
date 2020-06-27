@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
 import AppNavbar from '../../components/AppNavbar';
 import { Button, Container, Label, Jumbotron } from 'reactstrap';
+import axios from 'axios';
 
 class Dashboard extends Component {
-  state = {};
+  state = {
+    user: {},
+    isAuth: false,
+  };
+
+  async componentDidMount() {
+    let res = await axios.get('/api/auth/google/data');
+    this.setState({ user: res.data.user, isAuth: res.data.isAuthenticated });
+    console.log(this.state);
+  }
+
   render() {
     return (
       <div>
-        <AppNavbar />
+        <AppNavbar isAuth={this.state.isAuth} />
         <Container>
-          <Label>Should only be seen when logged in</Label>
+          <h1>Welcome {this.state.user.displayName}</h1>
           <Jumbotron>
             <Label>Some generic information about the projects</Label>
             <Button block href='/data/projects'>
