@@ -12,7 +12,6 @@ class Dashboard extends Component {
   async componentDidMount() {
     let res = await axios.get('/api/auth/google/data');
     this.setState({ user: res.data.user, isAuth: res.data.isAuthenticated });
-    console.log(this.state);
   }
 
   render() {

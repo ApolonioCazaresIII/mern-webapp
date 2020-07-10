@@ -18,6 +18,8 @@ import {
 import Select from 'react-select';
 import axios from 'axios';
 
+// TODO: Grab creator from session
+
 class TicketCreate extends Component {
   constructor(props) {
     super(props);
@@ -48,6 +50,11 @@ class TicketCreate extends Component {
   setShow = (val) => {
     this.setState({ show: val });
   };
+
+  async componentDidMount() {
+    let res = await axios.get('/api/auth/google/data');
+    this.setState({ user: res.data.user, isAuth: res.data.isAuthenticated });
+  }
 
   toggle = async () => {
     this.setState({ modal: !this.state.modal });
@@ -141,7 +148,7 @@ class TicketCreate extends Component {
   render() {
     return (
       <div>
-        <AppNavbar />
+        <AppNavbar isAuth={this.state.isAuth} />
         <div id='toastParent'>
           <Alert
             id='toastBody'

@@ -44,10 +44,6 @@ class About extends Component {
               </Col>
             </Row>
           </Jumbotron>
-          <Jumbotron>
-            <h1>How was TrackMyBug made?</h1>
-            <p className='lead'>{projectdesc}</p>
-          </Jumbotron>
         </Container>
       </div>
     );

@@ -34,8 +34,13 @@ class ProjectCreate extends Component {
       show: false,
       setShow: true,
     };
-
+    
     this.create = this.create.bind(this);
+  }
+
+  async componentDidMount() {
+    let res = await axios.get('/api/auth/google/data');
+    this.setState({ user: res.data.user, isAuth: res.data.isAuthenticated });
   }
 
   sendInvite = () => {
@@ -111,7 +116,7 @@ class ProjectCreate extends Component {
   render() {
     return (
       <div>
-        <AppNavbar />
+        <AppNavbar isAuth={this.state.isAuth} />
         <div id='toastParent'>
           <Alert
             id='toastBody'

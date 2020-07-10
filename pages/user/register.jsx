@@ -117,7 +117,9 @@ class Register extends Component {
         <Container>
           <Jumbotron>
             <h1 className='display-4'>Sign up</h1>
-            <Form onSubmit={this.onSubmit}>
+
+            {/*
+<Form onSubmit={this.onSubmit}>
               <FormGroup>
                 <Label for='username' style={{ marginTop: '.5rem' }}>
                   Username
@@ -174,6 +176,7 @@ class Register extends Component {
                 </Button>
               </FormGroup>
             </Form>
+              */}
             <p>
               Already have an account? <a href='/user/login'>Sign in</a>
             </p>

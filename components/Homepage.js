@@ -15,8 +15,8 @@ class Homepage extends Component {
             <hr className='my-2' />
             <p>To start tracking your bugs sign up!</p>
             <p className='lead'>
-              <Button color='primary' href='/user/register'>
-                Sign up
+              <Button color='primary' href='/user/login'>
+                Sign in
               </Button>
             </p>
           </Jumbotron>

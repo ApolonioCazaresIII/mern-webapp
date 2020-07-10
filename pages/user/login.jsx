@@ -24,11 +24,12 @@ class Login extends Component {
       <div>
         <AppNavbar />
         <Container className='themed-container' fluid='sm'>
-          <Jumbotron>
+          <Jumbotron style={{ textAlign: 'center' }}>
             <h1 className='display-4'>Sign In</h1>
             <Form onSubmit={this.onSubmit}>
               <FormGroup>
-                <Label for='username' style={{ marginTop: '.5rem' }}>
+                {/*
+<Label for='username' style={{ marginTop: '.5rem' }}>
                   Username
                 </Label>
                 <Input
@@ -49,6 +50,7 @@ class Login extends Component {
                 <Button color='dark' style={{ marginTop: '2rem' }} block>
                   Sign in
                 </Button>
+                  */}
                 <Button
                   href='/api/auth/google'
                   color='danger'
@@ -59,9 +61,6 @@ class Login extends Component {
                 </Button>
               </FormGroup>
             </Form>
-            <p>
-              Don't have an account? <a href='/user/register'>Sign up</a>
-            </p>
           </Jumbotron>
         </Container>
       </div>
